@@ -5,8 +5,7 @@ import numpy as np
 import openai
 key=os.environ['SECRET_TOKEN']
 openai.api_key=key
-from langchain.embeddings import OpenAIEmbeddings
-embeddings = OpenAIEmbeddings(openai_api_key=key)
+
 from numpy  import reshape
 from openai import OpenAI
 client = OpenAI(api_key=os.environ['SECRET_TOKEN'])
