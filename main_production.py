@@ -20,19 +20,22 @@ from htbuilder.units import percent, px
 from qa_llamaindex import indexgenerator
 from create_context import answer_question
 
-from llama_index.legacy.memory import ChatMemoryBuffer
-from llama_index.legacy.retrievers import BM25Retriever
-from llama_index.legacy.retrievers import VectorIndexRetriever
-from llama_index.legacy.core.llms.types import ChatMessage, MessageRole
-from llama_index.legacy.schema import QueryBundle
-from llama_index.legacy.schema import MetadataMode
-from llama_index.legacy.postprocessor import LongContextReorder 
-from llama_index.legacy.llms import OpenAI
-from llama_index.legacy import ServiceContext
-from llama_index.legacy.query_engine import RetrieverQueryEngine
-from llama_index.legacy.query_engine import RetrieverQueryEngine
-from llama_index.legacy.chat_engine import CondensePlusContextChatEngine
-from llama_index.legacy.retrievers import BaseRetriever
+from llama_index.core.memory import ChatMemoryBuffer
+from llama_index.retrievers.bm25 import BM25Retriever
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core.base.llms.types import ChatMessage, MessageRole
+from llama_index.core.schema import QueryBundle
+from llama_index.core.schema import MetadataMode
+from llama_index.core.postprocessor import LongContextReorder 
+from llama_index.llms.openai import OpenAI
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.chat_engine import CondensePlusContextChatEngine
+from llama_index.core.retrievers import BaseRetriever
+from llama_index.core.postprocessor import SentenceTransformerRerank
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core.retrievers import QueryFusionRetriever
+from llama_index.llms.perplexity import Perplexity
 
 def image(src_as_string, **style):
     return img(src=src_as_string, style=styles(**style))
@@ -111,34 +114,27 @@ with st.sidebar:
 
 #nodes=index.docstore.docs.values()
 
-indexPath_2000=r"llamaindex_entities_0.2"
+indexPath_2000=r"text_embedding_ada_002"
 documentsPath_2000=r"Text_Files_Old"
 index_2000=indexgenerator(indexPath_2000,documentsPath_2000)
-vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2)
-bm25_retriever_2000 = BM25Retriever.from_defaults(index=index_2000, similarity_top_k=2)
+vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2,embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
+bm25_retriever_2000 = BM25Retriever.from_defaults(index=index_2000,similarity_top_k=2)
 postprocessor = LongContextReorder()
-
 class HybridRetriever(BaseRetriever):
-    def __init__(self,vector_retriever_2000, bm25_retriever_2000):
-        #self.vector_retriever_1000 = vector_retriever_1000
-        #self.bm25_retriever_1000 = bm25_retriever_1000
-        self.vector_retriever_2000 = vector_retriever_2000
-        self.bm25_retriever_2000 = bm25_retriever_2000
+    def __init__(self, vector_retriever, bm25_retriever):
+        self.vector_retriever = vector_retriever
+        self.bm25_retriever = bm25_retriever
         super().__init__()
 
     def _retrieve(self, query, **kwargs):
-        bm25_nodes_2000 = self.bm25_retriever_2000.retrieve(query, **kwargs)
-        vector_nodes_2000 = self.vector_retriever_2000.retrieve(query, **kwargs)
-        encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
-        context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in bm25_nodes_2000+vector_nodes_2000])
-        num_token =  len(encoding.encode(context_str))
-        if num_token > 3900:
-            all_nodes = postprocessor.postprocess_nodes(nodes=bm25_nodes_2000+vector_nodes_2000,query_bundle=QueryBundle(query_str=prompt.lower()))
-        else:
-            all_nodes = bm25_nodes_2000+vector_nodes_2000
-        return all_nodes
-hybrid_retriever=HybridRetriever(vector_retriever_2000,bm25_retriever_2000)
+        bm25_nodes = self.bm25_retriever.retrieve(query, **kwargs)
+        vector_nodes = self.vector_retriever.retrieve(query, **kwargs)
 
+        # combine the two lists of nodes
+        all_nodes = bm25_nodes + vector_nodes
+        all_nodes = postprocessor.postprocess_nodes(nodes=all_nodes,query_bundle=QueryBundle(query))
+        return all_nodes[0:3]
+hybrid_retriever = HybridRetriever(vector_retriever_2000,bm25_retriever_2000)
 # User-provided prompt
 page_bg_img = '''
 <style>
@@ -148,7 +144,7 @@ background-size: cover;
 }
 </style>
 '''
-memory=ChatMemoryBuffer.from_defaults(token_limit=3900)
+memory=ChatMemoryBuffer.from_defaults(token_limit=3900) #3900 earlier
 rouge = Rouge()
 
 condense_prompt = (
@@ -159,26 +155,34 @@ condense_prompt = (
   "\nFollow Up Input: {question}"
   "\nStandalone question:")
 
+#Relaxed prompt with language identification, ans in form of bullet points or short paragraphs
+
+
+
 context_prompt=(
-        "You are a helpful and friendly chatbot who addresses queries in detail regarding I-Venture @ ISB."
+        "You are a helpful and friendly chatbot who addresses queries in detail and bulleted points regarding I-Venture @ ISB."
         "Here are the relevant documents for the context:\n"
         "{context_str}"
         "\nInstruction: Use the previous chat history above and context, to interact and help the user. Never give any kinds of links, email addresses or contact numbers in the answer."
         )
-def get_response(prompt,message_history):
-    llm = OpenAI(model="gpt-3.5-turbo")
-    service_context = ServiceContext.from_defaults(llm=llm)
-    #query_engine=RetrieverQueryEngine.from_args(retriever=hybrid_retriever,service_context=service_context,verbose=True)
-    chat_engine=CondensePlusContextChatEngine.from_defaults(retriever=hybrid_retriever,service_context=service_context,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt)
+
+llm = st.selectbox("Select LLM: ",("gpt-3.5-turbo","gpt-4-turbo","gpt-4o"))
+
+def get_response(llm,prompt,message_history):
+    llm_chat = OpenAI(model=llm)
+    chat_engine=CondensePlusContextChatEngine.from_defaults(llm=llm_chat,retriever=hybrid_retriever,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt,streaming=True)
     nodes = hybrid_retriever.retrieve(prompt.lower())
     response = chat_engine.chat(str(prompt.lower()))
-    validating_prompt = ("""You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
-                        Query: {question}  
-                        Answer: {answer}
-                        Your Feedback:
-                        """)
-    feedback = llm.complete(validating_prompt.format(question=prompt,answer=response.response))
-    if feedback.text==str(0):
+    context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
+    #st.write(context_str)
+    #validating_prompt = "You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
+                     ##   Query: {question}  
+                      #  Answer: {answer}
+                      #  Your Feedback:
+                        
+    #feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
+    feedback = 1
+    if feedback==str(0): #feedback.text
         st.write("DISTANCE APPROACH")
         response , joined_text=answer_question(prompt.lower())
         scores = rouge.get_scores(response, joined_text)
@@ -186,15 +190,16 @@ def get_response(prompt,message_history):
         st.session_state.messages.append(message)
         message_history.append(ChatMessage(role=MessageRole.ASSISTANT,content=str(response)),)
         response_list = [response, prompt , scores]  
-        df = pd.read_csv('logs/conversation_log.csv')
+        df = pd.read_csv(f'logs/conversation_logs_{llm}.csv')
         new_row = {'Question': str(prompt), 'Answer': response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"]}
         df = pd.concat([df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
-        df.to_csv('logs/conversation_logs.csv', index=False)
+        df.to_csv(f'logs/conversation_logs_{llm}.csv', index=False)
         bucket = 'aiex' # already created on S3
-        csv_buffer = StringIO()
-        df.to_csv(csv_buffer)
-        s3_resource= boto3.resource('s3',aws_access_key_id=os.environ['ACCESS_ID'],aws_secret_access_key= os.environ['ACCESS_KEY'])
-        s3_resource.Object(bucket, 'conversation_log.csv').put(Body=csv_buffer.getvalue())  
+        #csv_buffer = StringIO()
+        #df.to_csv(csv_buffer)
+        #s3_resource= boto3.resource('s3',aws_access_key_id=os.environ['ACCESS_ID'],aws_secret_access_key= os.environ['ACCESS_KEY'])
+        #s3_resource.Object(bucket, 'conversation_log.csv').put(Body=csv_buffer.getvalue()) 
+        #st.write(joined_text) 
         return response_list                                 
     else:
         context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in nodes])
@@ -202,16 +207,16 @@ def get_response(prompt,message_history):
         message = {"role": "assistant", "content": response.response}
         st.session_state.messages.append(message)
         message_history.append(ChatMessage(role=MessageRole.ASSISTANT,content=str(response.response)),)
-        response_list = [response.response , prompt , scores]
-        df = pd.read_csv('logs/conversation_logs.csv')
-        new_row = {'Question': str(prompt), 'Answer': response.response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"]}
+        response_list = [response.response, prompt , scores]
+        df = pd.read_csv(f'logs/conversation_logs_{llm}.csv')
+        new_row = {'Question': str(prompt), 'Answer': response.response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"] , "Context" : context_str}
         df = pd.concat([df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
-        df.to_csv('logs/conversation_logs.csv', index=False)
-        bucket = 'aiex' # already created on S3
-        csv_buffer = StringIO()
-        df.to_csv(csv_buffer)
-        s3_resource= boto3.resource('s3',aws_access_key_id=os.environ['ACCESS_ID'],aws_secret_access_key=os.environ['ACCESS_KEY'])
-        s3_resource.Object(bucket, 'conversation_log.csv').put(Body=csv_buffer.getvalue())
+        df.to_csv(f'logs/conversation_logs_{llm}.csv', index=False)
+        #bucket = 'aiex' # already created on S3
+        #csv_buffer = StringIO()
+        #df.to_csv(csv_buffer)
+        #s3_resource= boto3.resource('s3',aws_access_key_id=os.environ['ACCESS_ID'],aws_secret_access_key=os.environ['ACCESS_KEY'])
+        #s3_resource.Object(bucket, 'conversation_log.csv').put(Body=csv_buffer.getvalue())
         return response_list 
 
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
@@ -229,31 +234,5 @@ for message in st.session_state.messages: # Display the prior chat messages
 if st.session_state.messages[-1]["role"] != "assistant":
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
-                response = get_response(prompt=prompt,message_history=st.session_state.message_history)
+                response = get_response(llm=llm,prompt=prompt,message_history=st.session_state.message_history)
                 st.write(response[0])
-
-
-
-        
-
-
-                        
-myargs = [
-    "Made in India",""
-    " with ❤️ by ",
-    link("https://www.linkedin.com/in/anupamisb/", "@Anupam"),
-     br(),
-     link("https://i-venture.org/chatbot/", "ISB ChatBoT"),
-    ]
-
-def footer():
-    myargs = [
-    "Made in India",""
-    " with ❤️ by ",
-    link("https://www.linkedin.com/in/anupamisb/", " Anupam for "),
-    link("https://i-venture.org/chatbot/", "I-Venture @ ISB"),
-    ]
-    layout(*myargs)
-
-#layout(*myargs)
-footer()
