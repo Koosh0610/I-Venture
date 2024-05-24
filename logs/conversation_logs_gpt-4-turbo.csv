@@ -1,0 +1,634 @@
+Question,Answer,Unigram_Recall,Unigram_Precision,Bigram_Recall,Bigram_Precision,Context
+Dlabs ceo,The CEO of DLabs at I-Venture @ ISB is Saumya Kumar.,0.0157819225251076,1.0,0.0052631578947368,0.0052631578947368,
+Dlabs CEO,The CEO of DLabs at I-Venture @ ISB is Saumya Kumar. Saumya Kumar also serves as the Director of I-Venture @ ISB.,0.0200860832137733,0.875,0.0052631578947368,0.0052631578947368,
+Who is Aryan Jaiswal?,"Aryan Jaiswal is an Assistant Program Manager at I-Venture @ ISB. In his role, he is involved in the Technology Entrepreneurship Program – Tricity Edition, where he contributes to various activities such as providing tips on effective application processes and discussing the details of the program. His involvement helps in guiding and supporting student innovators and startups through their entrepreneurial journey.",0.0359778597785977,0.7358490566037735,0.0105088495575221,0.0105088495575221,
+Who is the marcom manager?,The Marcom Manager at I-Venture @ ISB is Saikat Gupta.,0.0092421441774491,1.0,0.0025974025974025,0.0025974025974025,
+who heads greatfour systems?,Pradeep Mittal is the CEO of GreatFour Systems. He is also listed as a member of the advisory board for I-Venture @ ISB.,0.0244755244755244,0.7,0.0056625141562853,0.0056625141562853,
+"The tagline for I-Venture @ ISB is ""Inspire . Invest . Innovate.""","Yes, that's correct! The tagline for I-Venture @ ISB is ""Inspire . Invest . Innovate."" This reflects their commitment to fostering entrepreneurship by inspiring innovators, investing in promising startups, and promoting innovative practices in the business landscape.",0.025297619047619,0.4857142857142857,0.0044883303411131,0.0044883303411131,
+give the address for dlabs,I could not find an answer.,0.003883495145631,0.3333333333333333,0.0,0.0,
+what are bhagwan chowdhry's responsibilities at isb?,Bhagwan Chowdhry is the Faculty Director at i-Venture @ ISB.,0.0086021505376344,0.4,0.0,0.0,
+what are bhagwan chowdhry's responsibilities at isb?,"Prof. Bhagwan Chowdhry holds significant responsibilities at the Indian School of Business (ISB), particularly in fostering entrepreneurship and nurturing startups. Here are some of his key roles:
+
+- **Faculty Director of I-Venture @ ISB**: In this capacity, Prof. Chowdhry oversees the initiatives that support entrepreneurship at ISB. This includes administering business incubators and facilitating the transformation of startups into successful entrepreneurial ventures.
+
+- **Mentorship and Guidance**: He is involved in drafting alumni members as mentors to help nurture startup ideas into scalable businesses. This mentorship plays a crucial role in providing both strategic and practical guidance to budding entrepreneurs.
+
+- **Global Startup Ecosystem Integration**: Prof. Chowdhry is instrumental in creating a global corridor for startups, which helps Indian startups to explore and expand into international markets and vice versa. This initiative is aimed at enhancing the global reach of startups incubated at ISB.
+
+- **Collaboration and Networking**: He works on engaging with various stakeholders within the entrepreneurship ecosystem, including other educational institutions, to host joint startup activities and bring teams together for collaborative opportunities.
+
+- **Educational Initiatives**: Prof. Chowdhry is also involved in educational programs like the CM ST Entrepreneurship and Innovation (CMSTEI) scheme, which supports and promotes entrepreneurship among scheduled tribes in Telangana, in collaboration with the Tribal Cooperative Finance Corporation (TRICOR).
+
+Through these roles, Prof. Bhagwan Chowdhry significantly contributes to the entrepreneurial landscape at ISB, supporting both the growth of individual entrepreneurs and the broader startup ecosystem.",0.096629213483146,0.5375,0.0328719723183391,0.0328719723183391,
+What all start-ups are supported by dlabs?,"DLabs at the Indian School of Business (ISB) supports a variety of startups, particularly those working in innovative and emerging technology sectors such as AI, Blockchain, and DeFi. Here are some examples of the types of startups and initiatives supported by DLabs:
+
+1. **Blockchain Impact Lab**:
+   - This initiative is supported by S&P Global and focuses on nurturing innovations in the blockchain space. It serves as a central hub for startups engaged in blockchain technology.
+
+2. **FinChain @ ISB powered by Broadridge**:
+   - This global accelerator program is designed for startups working in AI, Blockchain, and DeFi. It offers comprehensive support including mentorship, capacity building, and networking opportunities to help these startups thrive and attract investor attention.
+
+3. **LetsAuthor**:
+   - Featured in the I-WIN Startup Stories, LetsAuthor is an independent publishing house that empowers authors to collaborate and co-author books. It is part of the I-WIN program at ISB, which supports women-founded and co-founded startups.
+
+These examples illustrate the focus of DLabs on supporting startups that are innovative and have the potential to scale, particularly in the technology and digital sectors. The support provided includes mentorship, strategic partnerships, and access to a network of investors and industry experts, all aimed at accelerating the growth and success of these ventures.",0.0846432889963724,0.5384615384615384,0.0218281036834924,0.0218281036834924,
+dlabs ceo,"The CEO of DLabs at I-Venture @ ISB is Saumya Kumar. Saumya Kumar holds a significant role in leading the initiatives at DLabs, which is part of the innovation and entrepreneurship arm of the Indian School of Business (ISB). His leadership is pivotal in fostering the growth and development of startups incubated under DLabs, providing them with the necessary resources, mentorship, and support to scale their operations.",0.048780487804878,0.68,0.0149122807017543,0.0149122807017543,
+dlabs ceo,The CEO of DLabs at I-Venture @ ISB is Saumya Kumar. Saumya Kumar also serves as the Director of I-Venture @ ISB.,0.0200860832137733,0.875,0.0052631578947368,0.0052631578947368,
+dlabs ceo,The CEO of dlabs is Saumya Kumar.,0.0054945054945054,0.4285714285714285,0.001058201058201,0.001058201058201,
+What all start-ups are supported by dlabs?,I could not find an answer.,0.003883495145631,0.3333333333333333,0.0,0.0,
+Who is the assistant program manager at aic isb?,"The assistant program managers at AIC ISB are Adarsh Naik, Saitejeswara Reddy, Aryan Jaiswal, Rakshith M Chengappa, and Omkardeep Singh Bhatia.",0.0126315789473684,0.2857142857142857,0.002466091245376,0.002466091245376,
+give the address of dlabs.,I could not find an answer.,0.0038610038610038,0.3333333333333333,0.0,0.0,
+dlabs ceo,The CEO of dlabs is Saumya Kumar.,0.0054945054945054,0.4285714285714285,0.001058201058201,0.001058201058201,
+dlabs ceo,"The documents provided do not specify the name or details of the CEO of DLabs at the Indian School of Business. DLabs is mentioned as a venue for various events and programs under I-Venture @ ISB, such as the Blockchain Impact Lab and the I-WIN Demo Day, but specific administrative roles or personnel details like the CEO are not disclosed in the excerpts. If you need information about the leadership or specific roles within DLabs or I-Venture @ ISB, I recommend visiting their official website or contacting them directly through their provided communication channels.",0.0743801652892562,0.5373134328358209,0.0204081632653061,0.0204081632653061,"[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_careers.txt
+Excerpt:
+-----
+careers
+ I-Venture @ ISB 
+Careers 
+Come be a part of our team at DLabs & AIC ISB  bring your ideas, ingenuity and determination to make a difference. 
+Position Closed
+×
+Dismiss this alert.
+AIC ISB | Mohali 
+Assistant Program Manager 
+Assisting the program manager in designing, promoting, and managing the AIC ISB incubation/acceleration programs. 
+View details
+         Assistant Program Manager        
+×
+We are seeking an enthusiastic individual for the new position of Assistant Program Manager. The primary responsibility of this position is to assist the program manager in designing, promoting, and managing the AIC ISB Incubation / Acceleration programs of the assigned programs running at AIC-ISB.Roles And ResponsibilitiesAssisting Program Managers in new programs within AIC incubation, acceleration and corporate innovation verticalsSupport in end to end management of program along with stakeholder managementProactively engage with the startup ecosystem in IndiaDevelop and manage a pipeline of mentors, industry experts, and advisors for AIC across diverse industriesWork closely with ISB and its faculty members to leverage their subject matter expertiseScout for potential startups which are looking to scale up, through diverse platformsSupport in evaluating startups based on their business model and technical feasibility aligned with the program requirementsFacilitate targeted one-on-one support for startups in business development areas in close collaboration with AIC team and its stakeholdersResponsible for smooth and efficient functioning of the program at AICProgram documentation and reporting with AIC stakeholdersManage the day-to-day interaction with the Incubatees and provide continued strategic guidance to entrepreneurs in areas such as business modeling, sales, and marketing, financing, fundraising, overall strategy, operations etc.The ideal candidate must have a deep understanding of the Indian startup ecosystem and has worked closely with growth stage entrepreneurs to be able to understand their business and technical needs to scale their operations rapidly and succeed with the support of AIC.Skills And ExperiencesMasters or Bachelors degree with minimum 3-5 years of relevant experience.At least 1-2 years of experience working with entrepreneurs, startups, incubators or incubation consultancy.Ability to thrive in a startup ecosystem/ environment and deliver fast resultDemonstrated ability to cultivate, build, and maintain strong working relationships with stakeholders from diverse backgrounds and perspectivesProject management skills (goal-setting, organization, and implementation)Prior work in an incubator/accelerator would be an added advantagePrior entrepreneurial experience would be an advantageExcellent written and verbal communication skillsHow to ApplyPlease send a cover letter highlighting your fit for the role along with a detailed resume to contact@aicisb.org. Applications are being accepted until the position is filled. 
+        Close       
+Position Closed
+×
+Dismiss this alert.
+AIC ISB | Mohali 
+Executive Admin & Operations 
+Overall administrative and operational support for AIC ISB management. 
+View details
+         Executive Admin & Operations        
+×
+We are seeking an enthusiastic individual for the new position of Executive Admin & Operations to support the AIC ISB team with administrative and operational needs.Key Responsibilities:AIC ISB administration support to CEO and AIC ISB teamCo-ordinating with Program Managers for all the logistic support for various programsEvent Logistic Support, Cab bookings, Travel Bookings, Hotel Bookings, facilities booking, client co-ordination & approvals as and when requiredDatabase Management  Asset Database, Inventory, database of startups, speakers & database of MOUs signed with AICProcess Management  Following up with vendors for invoices, verifying/validating, obtaining approvals and forwarding to finance for paymentsSupervision of Housekeeping activities, monitoring and execution of repairs, service of A/cs, fortnightly pest control activity & deep cleaning activityVisitor Management  Co-ordination with visitors/startups for their entry into campus with prior intimation to security main gate Startup Entry Process  Arranging entry approvals for startupsInteraction with all stakeholders for the upkeep of AIC ISB officeOperational and maintenance support for Makerspace at AIC ISBQualification: GraduationSkills:Technical: MS Office & any other relevant technical skillBehavioral: Quick response to any taskExperience: 2-3 yearsJob Interface/Relationships:Internal:With finance for payment processWith commercials for POsWith IT, Housekeeping, Travel desk, F&BExternal:VendorsIndustryStartup CommunityHow to ApplyPlease send a cover letter highlighting your fit for the role along with a detailed resume to contact@aicisb.org. Applications are being accepted until the position is filled. 
+        Close
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_event_i-mentor-isb-session-1.txt
+entities: ['Plum', 'Hyderabad', 'Shreyas Acha']
+Excerpt:
+-----
+event_i-mentor-isb-session-1
+ « All Events
+This event has passed.
+I-Mentor @ ISB | Session 1
+June 2, 2023 
+« Blockchain Impact Lab
+4th edition I-Connect @ ISB »
+The first session of #mentorhours was open Office Hours at Hyderabad on marketing with Shreyas Acha, Head of Marketing at Plum joining us at DLabs and engaging 1-on-1 with the founders to understand their needs and challenges and guiding them in navigating through.
+     Add to calendar    
+  Google Calendar 
+  iCalendar 
+  Outlook 365 
+  Outlook Live 
+ Details 
+ Date: 
+ June 2, 2023 
+ Website: 
+ https://www.linkedin.com/posts/iventureatisb_mentor-hours-open-office-hours-at-dlabs-activity-7057363910965796865-jyli?utm_source=share&utm_medium=member_desktop 
+Organizer
+    I-Venture @ ISB   
+     Email    
+     i-venture@isb.edu    
+View Organizer Website 
+« Blockchain Impact Lab
+4th edition I-Connect @ ISB »
+Share the event on
+Leave a ReplyCancel ReplyYour email address will not be published. Required fields are marked *
+Name  *
+Email  *
+Website
+Add Comment *
+Save my name, email, and website in this browser for the next time I comment.
+I accept the Privacy Policy
+Post Comment
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_event_blockchain-impact-labs.txt
+entities: ['S & P Global', 'Indian School of Business']
+Excerpt:
+-----
+event_blockchain-impact-labs
+ « All Events
+This event has passed.
+Blockchain Impact Lab
+May 18, 2023 
+« Knowledge Series (I-Venture @ ISB) | Episode-3
+I-Mentor @ ISB | Session 1 »
+DLabs at the Indian School of Business has launched the Blockchain Impact Lab today, which has been made possible through the support of S&P Global. Equipped with state-of-the-art technology, the lab will act as a central hub at I-Venture @ ISB, dedicated to supporting startups and nurturing innovations in the #blockchain space.
+     Add to calendar    
+  Google Calendar 
+  iCalendar 
+  Outlook 365 
+  Outlook Live 
+ Details 
+ Date: 
+ May 18, 2023 
+Organizer
+    I-Venture @ ISB   
+     Email    
+     i-venture@isb.edu    
+View Organizer Website 
+« Knowledge Series (I-Venture @ ISB) | Episode-3
+I-Mentor @ ISB | Session 1 »
+Share the event on
+Leave a ReplyCancel ReplyYour email address will not be published. Required fields are marked *
+Name  *
+Email  *
+Website
+Add Comment *
+Save my name, email, and website in this browser for the next time I comment.
+I accept the Privacy Policy
+Post Comment
+-----"
+what all start-ups are supported by dlabs,"The documents provided mention DLabs at the Indian School of Business (ISB) as a hub for nurturing and supporting startups, particularly through various programs and events. However, specific names of all startups supported by DLabs are not listed in the excerpts. Here are a few examples that are mentioned:
+
+1. **Ergon Mobility Private Limited** - A startup incubated by D-Labs at ISB, which was part of the I-Connect @ ISB event. This startup focuses on mobility solutions.
+
+2. **Wabs** and **Pro Dough** - These are two food startups incubated by D-Labs that showcased their products at the I-Connect @ ISB event.
+
+DLabs supports startups in various sectors, including technology, food, and mobility, providing them with resources such as mentorship, networking opportunities, and exposure to venture capitalists and industry experts. For a comprehensive list of all startups supported by DLabs, you might need to refer to their official communications or directly contact them.",0.0640870616686819,0.4907407407407407,0.0081855388813096,0.0081855388813096,"[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_events_2023-10-27.txt
+entities: ['ISB\x92s Women of Innovation Program']
+Excerpt:
+-----
+events_2023-10-27
+  Loading view. 
+  Events Search and Views Navigation 
+  Search 
+  Enter Keyword. Search for Events by Keyword. 
+ Find Events
+  Event Views Navigation 
+    Day   
+   List  
+   Month  
+   Day  
+ Today
+    10/27/2023   
+    October 27, 2023   
+  Select date. 
+  All Day 
+October 27, 2023 
+  I-WIN 2.0 
+I-Venture @ ISBs Women of Innovation Program aims to provide acceleration support to women-founded/co-founded start-ups by handholding entrepreneurs through their scaling-up journey. The accelerator is designed to focus on leveraging ISBs strong []
+  Previous Day 
+  Next Day  
+    Subscribe to calendar   
+  Google Calendar 
+  iCalendar 
+  Outlook 365 
+  Outlook Live 
+  Export .ics file 
+  Export Outlook .ics file
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_finchain.txt
+entities: ['Broadridge', 'Indian School of Business']
+Excerpt:
+-----
+finchain
+Accelerating Innovations in AI, Blockchain and DeFi 
+Applications Closed 
+About the Program 
+ DLabs Incubator Association (DLabs) at the Indian School of Business (ISB), in collaboration with Broadridge, launches a global accelerator program for start-ups working in AI, Blockchain and DeFi space. The two organizations have come together to support and nurture innovations by offering comprehensive support, including mentorship, capacity building and networking opportunities. We empower startups working in different themes to thrive and attract the attention of relevant stakeholders and investors. 
+Criteria 
+Startups working in AI, Blockchain and DeFi thematic areas 
+Minimum 1 year from incorporation 
+Early revenue stage ventures with scalability potential 
+Themes 
+Use of AI in testing 
+Generating insights from account and market information 
+Foundational technology and infrastructure for Blockchain and DeFi ecosystems 
+Integration of AI and Blockchain technologies in fintech 
+Developing innovative decentralised applications on Blockchain platforms in fintech 
+Program Offerings 
+Tailored Masterclasses & Workshops by Industry Experts 
+​​Mentorship from DLabs and Broadridge 
+Go-to-Market Strategies 
+Fundraising Support 
+Internationalization Support 
+Piloting Opportunities  
+Strategic Partnerships 
+Networking 
+Startup Toolkit 
+Program Timeline 
+Program Partners 
+Knowledge Partners 
+Investor Partners 
+Ecosystem Partners 
+Contact Us 
+contact@isbdlabs.org 
+FAQs 
+Who is eligible to apply for the FinChain @ ISB powered by Broadridge Acceleration Program?
+Startups working in AI,  Blockchain and DeFi thematic areas, incorporated for a minimum of 1 year, at the post MVP stage or advanced product stage, and in the early revenue stage with scalability potential are eligible to apply.
+What support does the program offer to selected startups?
+The program offers comprehensive support, including mentorship from Dlabs and Broadridge, tailored masterclasses and workshops, business development,  go-to-market strategies, scale-up support, internationalisation support and strategic partnerships.
+How long does the FinChain @ ISB powered by Broadridge Acceleration Program last?
+The program has a timeline of approximately 9 weeks, including the acceleration period from January to March followed by a Demo day.
+What happens after the application submission?
+Shortlisted startups will be notified and provided with further instructions and details regarding their participation in the program.
+Is the FinChain @ ISB powered by Broadridge Acceleration Program open to startups outside of India?
+Yes, startups across the globe can apply
+How can I get in touch for further inquiries?
+For any further inquiries or questions, please feel free to contact us at contact@isbdlabs.org Our team will be happy to assist you and provide the necessary information.
+Close this module
+Build for Billions AcceleratorA Fintech Accelerator to bridge the gap between financial services and the informal economy.
+Apply NowNo thanks, I’m not interested!
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_startup-toolkit.txt
+Excerpt:
+-----
+Offer:● All plans free for 3 months● Inclusions:
+- Deep Segmentation- User Analytics- 100,000 Emails Free Per Month- A/B Testing- Rule Based Website Personalization For D2C- 24/7 Email Support- Scheduled Office Hours- Additional Emails at Rs 0.035/ Email- Paid Add Ons - Whats-app, SMS- Much more
+QapitaQapita enables you to maintain your CapTable and transactions seamlessly on a secure system and share it with all your stakeholders. Further, you can run future round scenarios and maintain documents of your transactions for investor due-diligence. You can also setup and issue ESOPs to your team members digitally through Qapita. Qapita is trusted by over 650 startups across the globe
+Offer:● Free access to Qapita product● $350k worth access to Qapita Bundled products from its partners: AWS, IBM, Freshworks, Zoho, DBS, Mailmodo, VakilSearch etc.● Monthly 1:1 Office Hours with industry experts
+Google CloudStart program:If you’re early in your startup journey and not yet backed with startup equity funding, you may be eligible for the following:● Up to $2,000 USD in credits to use over two years ● Access to technical resources and our global startup community
+Scale program:If you’re backed with startup equity funding from pre-Seed to Series A, you may be eligible for the following:● Your first year of Google Cloud and Firebase usage covered with credits up to $100,000● 20% of Google Cloud and Firebase usage usage covered in year two (up to an additional $100,000 in credits)* ● Guidance from your dedicated Startup Success Manager and Google Cloud engineers
+MiroMiro gives startups everything it needs to scale and succeed at speed. Discover and validate your ideas, design products, and apply product frameworks. Try the startup tool that's built for teams. That is why we partnered with Miro's Startup Program.
+Offer:❖ $1,000 in credits to grow their business.❖ For companies that have raised over $5 million, they offer a Scale Up Program-• We will give venture-backed companies up to 20% discount on our business or enterprise plan• The dedicated account management team• Personalized recommendations on best practice.• Invitations to events and resources
+CanvaCanva is a graphic design platform, used to create social media graphics, presentations, posters, documents and other visual content. The app includes templates for users to use.
+Offer:❖ 3 Months free access to Canva Pro
+MongoDBMongoDB for Startups (mongodb.com/startups) is a program to enable the success and growth of high-potential startups. Designed to give early-stage startups the resources they need to build and scale their businesses. Startups must be Series A or earlier funding stage, must be building a product or service (agencies are not eligible) and have not previously participated in MongoDB for Startups (formerly known as “MongoDB Startup Accelerator”)
+Offer:❖ $3,600 in credits for MongoDB Atlas, our fully managed cloud database (valid for 12 months)❖ A dedicated technical advisor for 1:1 consulting ❖ Co-marketing opportunities ❖ Access to the MongoDB developer ecosystem, and more.
+CassixcomCassixcom is a leading Business Process Support Services provider, offering outstanding results for businesses. We tailor our BPO services to suit your business.
+PickrrPickrr is an AI-powered SaaS platform that works on an assessment of the historical performance of 3PL that enables you to optimize shipping cost and performance
+Offer:● Upto Rs 5000 free credits on sign up with Pickrr ( Shipping )● Upto Rs 15,000 free credits on using Pickrr Plus ( Warehousing plus shipping )● 1 month free use of features like Pickrr Predict and Pickrr Connect● Discounted commercials for Fastrr
+CooeeCooee is a high-tech platform that integrates with your mobile app/web in minutes to deliver personalised, data-driven, and immersive notifications on the fly.
+Offer:● Lifetime 50% discount in STARTUP and SCALE plan● Startup stage- Rs 5000/month (at 50% discount)● Scale stage- Rs 12500/month (at 50% discount)
+York.ieYork IE is a strategic growth firm that puts the focus back where it belongs: on building successful, sustainable companies.
+Offer:● Individual Plus[Single User] - 12 + 1 month free $35/month [NoDiscount] and $420/Year● Teams [5 team members, customizable if needed more or less Members] - 12+ 2 months Free, $300/Month [50% Discount] and 1800/Year [After discount]● The 50% discount in STARTUP and SCALE plan is valid for a year for the AIC and DLabs portfolio companies.
+MSG91MSG91 is a cloud communication platform that offers powerful messaging solutions to empower business communications. It consists of 10+ channels across the platform offering services over SMS, Email, Voice, WhatsApp, RCS via API.
+Offer:● 25000 credits or worth INR 6250 per month for a period of 6 months (For transactional SMS & OTP) as per the MSG91 Startup Policy.● Technical and non-technical assistance.● 20000 Free Transactional Emails.
+Spice Route FinanceSpice Route Finance is a boutique financial advisory firm which provides services in the realms of strategic advisory, FP&A and financial reporting to organizations across all industries. At its core, Spice Route Finance aims to institutionalise financial leadership across its client base to ensure that the concepts of integrity, progress and risk management are integrated across all levels of decision-making.
+Offer:● All companies will receive a discount of 25% on the services availed from Spice Route Finance.
+Startup StoriesStartup Story aims to create a platform for young entrepreneurs which is not only going to bring them into the light but also inspire the young population to pursue their entrepreneurship dream, all the while being inclusive of the regions these startups are emerging from. We especially focus on entrepreneurs coming from tier 2 and 3 cities, empowering them with the voice they deserve to bring their stories and ideas to the stage.
+Offer:● Exclusive 10% discount offered to ISB through the Startup Toolkit Program on our standard content curation charges● 40% discount on the complete branding package for startups
+EzyLegalezyLegal is an AI enabled legal technology platform. It aims to make legal - transparent, trustworthy, and conveniently accessible to everyone. ezyLegal helps bridge the gap between the Customer and the Lawyer.
+Offer:● Exclusive and discounted price list for all the legal service
+MathWorksMathWorks enables Startups with Industry standard tools for free for the first year of usage. Develop your products and reach early-stage milestones fast with MATLABand Simulink.
+Offer:
+10 Licenses per company for MATLAB, Simulink and 90+ additional toolboxes
+Engineering support from MathWorks experts
+MATLAB Central, a user community of 100,000+ members
+Participate in opportunities to drive awareness of your product
+DivamiDivami Design Labs is a leading UI/UX and Engineering provider, assisting businesses with their strategic approach, Ul UX expertise, and design-led product engineering services.
+Close this module
+Build for Billions AcceleratorA Fintech Accelerator to bridge the gap between financial services and the informal economy.
+Apply NowNo thanks, I’m not interested!
+-----"
+what all start-ups are supported by i-venture?,"The documents provided do not list all the startups supported by I-Venture @ ISB in detail. However, I-Venture @ ISB is known for fostering entrepreneurship and nurturing startups through various programs and initiatives. Here are some key points and examples mentioned:
+
+1. **Ergon Mobility Private Limited** - Mentioned as a startup incubated by D-Labs at ISB, which participated in the I-Connect @ ISB event.
+
+2. **Wabs** and **Pro Dough** - Food startups incubated by D-Labs that showcased their products at the I-Connect @ ISB event.
+
+3. **General Support** - I-Venture @ ISB supports a wide range of startups across different sectors by providing them with resources such as mentorship, networking opportunities, and exposure to venture capitalists.
+
+4. **Women of Innovation Program** - This specific program under I-Venture @ ISB aims to provide acceleration support to women-founded or co-founded startups.
+
+For a comprehensive list of all startups supported by I-Venture @ ISB, or more detailed information about their programs and the types of startups they typically support, you might need to refer to their official communications or directly contact them through their available channels.",0.0878661087866108,0.3529411764705882,0.019404915912031,0.019404915912031,"[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_events_list__tribe-bar-date=2023-10-27.txt
+entities: ['ISB ’ s Women of Innovation Program']
+Excerpt:
+-----
+events_list__tribe-bar-date=2023-10-27
+  Loading view. 
+  Events Search and Views Navigation 
+  Search 
+  Enter Keyword. Search for Events by Keyword. 
+ Find Events
+  Event Views Navigation 
+    List   
+   List  
+   Month  
+   Day  
+ Today
+     Upcoming    
+     Upcoming    
+  Select date. 
+  October 2023 
+   Fri  
+   27  
+October 27, 2023 
+  I-WIN 2.0 
+I-Venture @ ISB’s Women of Innovation Program aims to provide acceleration support to women-founded/co-founded start-ups by handholding entrepreneurs through their scaling-up journey. The accelerator is designed to focus on leveraging ISB’s strong […]
+   Previous Events 
+  Today 
+   Next Events 
+    Subscribe to calendar   
+  Google Calendar 
+  iCalendar 
+  Outlook 365 
+  Outlook Live 
+  Export .ics file 
+  Export Outlook .ics file
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_agrifood-accelerator.txt
+entities: ['Agri and Food', 'Deshpande Startups']
+Excerpt:
+-----
+agrifood-accelerator
+ Jointly Presents 
+Bringing the best of the support systems for agri & food entrepreneurs. 
+Application Closed
+About the Program 
+I-Venture @ ISB join forces with Deshpande Startups to run a pan India initiative to identify and engage an outstanding pool of potential entrepreneurs with innovative solutions to address problems in the Agri and Food sector with high growth potential. This initiative aims to build/nurture potential ventures by providing handholding, capacity building support, curated field visits to test/trial their products along with a platform to network with relevant stakeholders and investors.At the end of the program the entrepreneurs will be able to improve their product/ business model, get access to supply chain, market and potential customers. Also the startups will be investment ready to raise funds in the near future. 
+Criteria 
+Minimum 1 year from incorporation 
+Early revenue stage ventures with scalability potential 
+Program Offerings 
+Mentorship from I-Venture @ ISB and Deshpande Startups 
+Tailored Masterclasses and Workshops 
+Product Development and Refinement 
+Field Immersions 
+Access to Lab facilities 
+Go-to-Market strategies 
+Market Access and Scale up Support 
+Internationalization support 
+Strategic Partnerships 
+Fundraising support 
+Networking 
+Startup Toolkit 
+Program Timeline 
+Program Partners 
+Knowledge Partners 
+Investor Partners 
+Ecosystem Partners 
+Technology Partner 
+Contact Us 
+I-Venture @ ISB: rakshith_chengappa@isbdlabs.orgDeshpande Startup: mohamed.rizwan@dfmail.org 
+FAQs 
+Who can apply to the Agri-Food Acceleration program?
+A startup should be a private limited firm with minimum 1 year from incorporation at the time of application and in early revenue & growth stage are invited to apply.
+What are the focus sector for this program?
+Startups with their products/services in Agri, Food tech and allied sectors can apply. 
+Who wont be considered for this program?
+Startups registered before 2017Single founder
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_iwin.txt
+Excerpt:
+-----
+iwin
+ Started by you. Accelerated with I-Venture @ ISB. 
+Application Closed
+About the program 
+I-Venture @ ISB’s Women of Innovation Program aims to provide acceleration support to women founded/co-founded start-ups by handholding entrepreneurs through their scaling-up journey.The accelerator is designed to focus on leveraging ISB’s strong network to enable women to scale their products/services. Women entrepreneurs can then glide through to the Go-to-Market stage and work on scaling up through focused guidance, workshops, shared learning, networking along with a platform for fundraising with extensive business growth opportunities.I-WIN 2.0 will enable the startups to be investment ready and will be helpful for startups who want to raise funds in near future. 
+Sector Agnostic
+4 months
+Program offerings 
+Investment readiness and fundraising 
+Go-to-Market strategies 
+Fine-tune business model 
+Engagement with domain experts 
+Process standardization 
+Strategic partnerships 
+Internationalization support 
+Networking 
+Pilot Opportunities 
+Startup Toolkit 
+Criteria 
+Minimum 1 year from Incorporation 
+ Early Growth stage ventures 
+Process 
+Accelerator Alumni 
+Monk & Mei is an indo-western luxury women’s wear brand that is both affordable and responsible. 
+Sector Apparel (E-commerce) 
+Cunomial is a technology company that builds simple, easy-to-use and cloud-native digital products. 
+Sector SaaS 
+Lami.Fit is a healthtech platform which uses DNA, blood & body markers to predict health risks and curate personalised health plans. 
+Sector Health & Wellness 
+Careerboat is building a career-growth platform for undergraduate students and early professionals. 
+Sector Education 
+NeoGuru is a digital learning platform that is enabled by ‘extended reality’. 
+Sector Education 
+LetsEndorse is a social enterprise on a mission to solve social issues at scale. 
+Sector Social 
+Heart It Out provides easily accessible mental health services that are accurate and digitalized. 
+Sector Health & Wellness 
+LetsAuthor is a collaborative book publishing platform for authors to bring their work to the world. 
+Sector Education 
+ Anubhuti is the bridge between school and community – creating an educational environment for underprivileged children. 
+Sector Impact 
+Vidhyalay Udhyam is a social enterprise set out to co-create world class, yet affordable maker-labs in the most vulnerable geographies of India. 
+Sector Impact 
+Helper4U is a job portal created especially for the domestic workers market. 
+Sector HR 
+Shenzyn is a 360 degree career building ecosystem, designed especially for women. 
+Sector HR 
+Of Experiences bridges non-traditional talent with organizations that are looking to support such talent. 
+Sector Edtech 
+Storehi is an asset-light, yet hyperlocal e-commerce marketplace – covering groceries, medicines, or even electronics. 
+Sector Retail (E-Commerce) 
+FoodFox is digitising canteens and food courts of college, university, hospital & corporate campuses. 
+Sector Food 
+Fingertop is being built like popular food delivery apps, but for tailors. 
+Sector Apparel 
+Alumni speak 
+ Play Video
+ Play Video
+Investment Partners 
+Ecosystem Partners 
+Contact Us 
+contact@aicisb.org | +91 72928 87929 
+Close this module
+Build for Billions AcceleratorA Fintech Accelerator to bridge the gap between financial services and the informal economy.
+Apply NowNo thanks, I’m not interested!
+-----"
+Who is the assistant program manager at aic isb?,"The documents provided do not specify the name of the current Assistant Program Manager at AIC ISB. The excerpt from the careers document mentions the role and responsibilities of the Assistant Program Manager, including assisting in designing, promoting, and managing the AIC ISB incubation/acceleration programs, but it does not provide the name of the individual occupying this position.
+
+For the most accurate and updated information regarding the current Assistant Program Manager at AIC ISB, you might consider reaching out directly to AIC ISB through their official communication channels.",0.0496350364963503,0.5666666666666667,0.0135363790186125,0.0135363790186125,"[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_cleantech-accelerator.txt
+entities: ['Accelerating the Future of Sustainability Apply Now Application', 'AIC-Indian School of Business']
+Excerpt:
+-----
+cleantech-accelerator
+Accelerating the Future of Sustainability 
+Apply Now
+ Application deadline: 31st August 2023 
+About the Program 
+AIC-Indian School of Business, presents a nationwide initiative dedicated to identifying and engaging exceptional entrepreneurs in the cleantech sector. This program aims to nurture ventures with innovative solutions to address environmental challenges in renewable energy, energy efficiency, climate tech, clean water, e-mobility, and green building. By offering comprehensive support, including mentorship, capacity building, field trials, and networking opportunities, we empower cleantech startups to thrive and attract the attention of relevant stakeholders and investors.Join us in driving sustainable change and building a greener future through the CleanTech Acceleration Program. 
+Criteria 
+Minimum 1 Year of incorporation 
+Post MVP stage or Advance Product stage 
+Early revenue stage ventures with scalability potential 
+Program Offerings 
+Need based mentorship 
+Capacity building support 
+Go-To-Market 
+Process Standardization 
+Access to Lab Facilities 
+Analytical Support 
+Market Access & Scale up Support 
+Internationalization Support 
+Strategic Partnerships 
+Fundraising Support 
+Networking 
+Startup Toolkit 
+Program Timeline 
+Program Partners 
+Government Partners 
+Investor Partners 
+Ecosystem Partners 
+Contact Us 
+contact@aicisb.org 
+Apply Now
+FAQs 
+Who is eligible to apply for the CleanTech Acceleration Program?
+Startups incorporated for a minimum of 1 year, at the post MVP stage or advanced product stage (TRL 8-9), and in the early revenue stage with scalability potential are eligible to apply.
+What support does the program offer to selected startups?
+The program offers comprehensive support, including mentorship from AIC-ISB, tailored masterclasses and workshops, business development and market access assistance, field immersions, access to lab facilities, go-to-market strategies, market access and scale-up support, internationalization support, strategic partnerships
+How long does the CleanTech Acceleration Program last?
+The program has a timeline of approximately 3 months, including the acceleration period from August to October. It also includes a Demo Day event in November for startups to showcase their progress and accomplishments.
+What happens after the application submission?
+After the application submission, the shortlisting and onboarding process will take place in July and August. Shortlisted startups will be notified and provided with further instructions and details regarding their participation in the program.
+Is the CleanTech Acceleration Program open to startups outside of India?
+No, the CleanTech Acceleration Program is specifically designed for startups incorporated in India. It is not open to startups from outside of India.
+How can I get in touch for further inquiries?
+For any further inquiries or questions, please feel free to contact us at contact@aicisb.org. Our team will be happy to assist you and provide the necessary information.
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_events_tag_aic-isb.txt
+entities: ['ISB ’ s Women of Innovation Program']
+Excerpt:
+-----
+events_tag_aic-isb
+  Loading view. 
+     There are no upcoming events.     
+     There are no upcoming events.     
+  AIC ISB 
+  Events Search and Views Navigation 
+  Search 
+  Enter Keyword. Search for Events by Keyword. 
+ Find Events
+  Event Views Navigation 
+    List   
+   List  
+   Month  
+   Day  
+ Today
+     Upcoming    
+     Upcoming    
+  Select date. 
+ Latest Past Events
+   Oct  
+   27  
+   2023  
+October 27, 2023 
+  I-WIN 2.0 
+I-Venture @ ISB’s Women of Innovation Program aims to provide acceleration support to women-founded/co-founded start-ups by handholding entrepreneurs through their scaling-up journey. The accelerator is designed to focus on leveraging ISB’s strong network to enable women to scale their products/services. Women entrepreneurs can then glide through to the Go-to-Market stage and work on scaling up through focused […]
+   Oct  
+   3  
+   2023  
+October 3, 2023 
+  I-Mentor @ ISB | Session 2 
+In our recent Mentor Hours - Open Office Hours, we had Mahesh Yellai and Srikanth Narayanan joining us, actively engaging with our startups to understand their challenges and help them navigate. Mahesh brought his extensive experience in SaaS and AI to the table, while Srikanth shared his expertise in the D2C space, providing invaluable insights to our startups.
+   Aug  
+   21  
+   2023  
+August 21, 2023 
+  Knowledge Series (I-Venture @ ISB) | Episode – 4 
+Entrepreneurship is a complex and multifaceted endeavour that involves a range of skills and knowledge, from business planning and financial management to marketing and sales, team building, and more. We believe by providing access to information and resources that will help founders develop these skills and knowledge, we can create a more vibrant and thriving […]
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_careers.txt
+Excerpt:
+-----
+careers
+ I-Venture @ ISB 
+Careers 
+Come be a part of our team at DLabs & AIC ISB  bring your ideas, ingenuity and determination to make a difference. 
+Position Closed
+×
+Dismiss this alert.
+AIC ISB | Mohali 
+Assistant Program Manager 
+Assisting the program manager in designing, promoting, and managing the AIC ISB incubation/acceleration programs. 
+View details
+         Assistant Program Manager        
+×
+We are seeking an enthusiastic individual for the new position of Assistant Program Manager. The primary responsibility of this position is to assist the program manager in designing, promoting, and managing the AIC ISB Incubation / Acceleration programs of the assigned programs running at AIC-ISB.Roles And ResponsibilitiesAssisting Program Managers in new programs within AIC incubation, acceleration and corporate innovation verticalsSupport in end to end management of program along with stakeholder managementProactively engage with the startup ecosystem in IndiaDevelop and manage a pipeline of mentors, industry experts, and advisors for AIC across diverse industriesWork closely with ISB and its faculty members to leverage their subject matter expertiseScout for potential startups which are looking to scale up, through diverse platformsSupport in evaluating startups based on their business model and technical feasibility aligned with the program requirementsFacilitate targeted one-on-one support for startups in business development areas in close collaboration with AIC team and its stakeholdersResponsible for smooth and efficient functioning of the program at AICProgram documentation and reporting with AIC stakeholdersManage the day-to-day interaction with the Incubatees and provide continued strategic guidance to entrepreneurs in areas such as business modeling, sales, and marketing, financing, fundraising, overall strategy, operations etc.The ideal candidate must have a deep understanding of the Indian startup ecosystem and has worked closely with growth stage entrepreneurs to be able to understand their business and technical needs to scale their operations rapidly and succeed with the support of AIC.Skills And ExperiencesMasters or Bachelors degree with minimum 3-5 years of relevant experience.At least 1-2 years of experience working with entrepreneurs, startups, incubators or incubation consultancy.Ability to thrive in a startup ecosystem/ environment and deliver fast resultDemonstrated ability to cultivate, build, and maintain strong working relationships with stakeholders from diverse backgrounds and perspectivesProject management skills (goal-setting, organization, and implementation)Prior work in an incubator/accelerator would be an added advantagePrior entrepreneurial experience would be an advantageExcellent written and verbal communication skillsHow to ApplyPlease send a cover letter highlighting your fit for the role along with a detailed resume to contact@aicisb.org. Applications are being accepted until the position is filled. 
+        Close       
+Position Closed
+×
+Dismiss this alert.
+AIC ISB | Mohali 
+Executive Admin & Operations 
+Overall administrative and operational support for AIC ISB management. 
+View details
+         Executive Admin & Operations        
+×
+We are seeking an enthusiastic individual for the new position of Executive Admin & Operations to support the AIC ISB team with administrative and operational needs.Key Responsibilities:AIC ISB administration support to CEO and AIC ISB teamCo-ordinating with Program Managers for all the logistic support for various programsEvent Logistic Support, Cab bookings, Travel Bookings, Hotel Bookings, facilities booking, client co-ordination & approvals as and when requiredDatabase Management  Asset Database, Inventory, database of startups, speakers & database of MOUs signed with AICProcess Management  Following up with vendors for invoices, verifying/validating, obtaining approvals and forwarding to finance for paymentsSupervision of Housekeeping activities, monitoring and execution of repairs, service of A/cs, fortnightly pest control activity & deep cleaning activityVisitor Management  Co-ordination with visitors/startups for their entry into campus with prior intimation to security main gate Startup Entry Process  Arranging entry approvals for startupsInteraction with all stakeholders for the upkeep of AIC ISB officeOperational and maintenance support for Makerspace at AIC ISBQualification: GraduationSkills:Technical: MS Office & any other relevant technical skillBehavioral: Quick response to any taskExperience: 2-3 yearsJob Interface/Relationships:Internal:With finance for payment processWith commercials for POsWith IT, Housekeeping, Travel desk, F&BExternal:VendorsIndustryStartup CommunityHow to ApplyPlease send a cover letter highlighting your fit for the role along with a detailed resume to contact@aicisb.org. Applications are being accepted until the position is filled. 
+        Close
+-----"
+give the address of dlabs,"The documents do not provide a specific postal address for DLabs at the Indian School of Business. However, DLabs is associated with the ISB Hyderabad Campus. For the exact location or address, it would be best to visit the official website of the Indian School of Business or contact them directly through their official communication channels. This will ensure you get the most accurate and up-to-date information regarding their location.",0.13218390804597702,0.41818181818181815,0.02608695652173913,0.02608695652173913,"[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_event_blockchain-impact-labs.txt
+entities: ['S & P Global', 'Indian School of Business']
+Excerpt:
+-----
+event_blockchain-impact-labs
+ « All Events
+This event has passed.
+Blockchain Impact Lab
+May 18, 2023 
+« Knowledge Series (I-Venture @ ISB) | Episode-3
+I-Mentor @ ISB | Session 1 »
+DLabs at the Indian School of Business has launched the Blockchain Impact Lab today, which has been made possible through the support of S&P Global. Equipped with state-of-the-art technology, the lab will act as a central hub at I-Venture @ ISB, dedicated to supporting startups and nurturing innovations in the #blockchain space.
+     Add to calendar    
+  Google Calendar 
+  iCalendar 
+  Outlook 365 
+  Outlook Live 
+ Details 
+ Date: 
+ May 18, 2023 
+Organizer
+    I-Venture @ ISB   
+     Email    
+     i-venture@isb.edu    
+View Organizer Website 
+« Knowledge Series (I-Venture @ ISB) | Episode-3
+I-Mentor @ ISB | Session 1 »
+Share the event on
+Leave a ReplyCancel ReplyYour email address will not be published. Required fields are marked *
+Name  *
+Email  *
+Website
+Add Comment *
+Save my name, email, and website in this browser for the next time I comment.
+I accept the Privacy Policy
+Post Comment
+-----
+
+[Excerpt from document]
+file_path: Text_Files\https___i-venture.org_connect.txt
+Excerpt:
+-----
+connect
+ I-Venture @ ISB 
+Connect with us 
+Were always up for a conversation on entrepreneurship. Reach out to us and you can be sure well get back to you. 
+D-Labs Incubator AssociationISB Hyderabad Campuscontact@isbdlabs.org 
+Locate Us
+Atal Incubation Centre ISB Mohali Campuscontact@aicisb.org 
+Locate Us
+Tell us about your query 
+Name *Email Address *Phone Number *About your query *0 / 200 Submit
+-----"
