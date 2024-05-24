@@ -200,6 +200,7 @@ def get_response(llm,prompt,message_history):
         return response_list                                 
     else:
         context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in nodes])
+        st.write(context_str)
         scores=rouge.get_scores(response.response,context_str)
         message = {"role": "assistant", "content": response.response}
         st.session_state.messages.append(message)
