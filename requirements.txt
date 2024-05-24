@@ -168,7 +168,6 @@ srsly==2.4.8
 streamlit==1.33.0
 striprtf==0.0.26
 sympy==1.12
-systemd-python==235
 tenacity==8.2.3
 thinc==8.2.3
 threadpoolctl==3.4.0
