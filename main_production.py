@@ -32,10 +32,7 @@ from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.chat_engine import CondensePlusContextChatEngine
 from llama_index.core.retrievers import BaseRetriever
-from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.embeddings.openai import OpenAIEmbedding
-from llama_index.core.retrievers import QueryFusionRetriever
-from llama_index.llms.perplexity import Perplexity
 
 def image(src_as_string, **style):
     return img(src=src_as_string, style=styles(**style))
