@@ -167,7 +167,6 @@ SQLAlchemy==2.0.29
 srsly==2.4.8
 streamlit==1.33.0
 striprtf==0.0.26
-support-info==1.0
 sympy==1.12
 systemd-python==235
 tenacity==8.2.3
