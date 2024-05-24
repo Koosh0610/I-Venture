@@ -154,7 +154,6 @@ scikit-learn==1.4.2
 scipy==1.13.0
 sentence-transformers==2.7.0
 seqeval==1.2.2
-setools==4.4.1
 six==1.15.0
 smart-open==6.4.0
 smmap==5.0.1
