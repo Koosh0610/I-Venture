@@ -6,9 +6,13 @@ from llama_index.legacy.extractors.metadata_extractors import EntityExtractor
 from llama_index.legacy.node_parser import SentenceSplitter
 from llama_index.legacy.ingestion import IngestionPipeline
 from llama_index.legacy import ServiceContext, VectorStoreIndex
-from llama_index.legacy.llms import OpenAI
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
 import streamlit as st 
-from llama_index.legacy import (StorageContext,load_index_from_storage)
+
+from llama_index.core import load_index_from_storage
+from llama_index.core import StorageContext
+
 @st.cache_resource
 def indexgenerator(indexPath, documentsPath):
 
@@ -39,6 +43,6 @@ def indexgenerator(indexPath, documentsPath):
         #load existing index
         print("Existing")
         storage_context = StorageContext.from_defaults(persist_dir=indexPath)
-        index = load_index_from_storage(storage_context,service_context=ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0, system_prompt="You are an expert on I-Venture @ ISB and your job is to answer technical questions. Assume that all questions are related to I-Venture @ ISB. Keep your answers technical and based on facts – do not hallucinate features.")))
+        index = load_index_from_storage(storage_context,llm=OpenAI(model="gpt-3.5-turbo", temperature=0, system_prompt="You are an expert on I-Venture @ ISB and your job is to answer technical questions. Assume that all questions are related to I-Venture @ ISB. Keep your answers technical and based on facts – do not hallucinate features."),embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
         
     return index
