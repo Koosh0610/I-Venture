@@ -152,7 +152,6 @@ s3transfer==0.10.1
 safetensors==0.4.3
 scikit-learn==1.4.2
 scipy==1.13.0
-selinux==3.4
 sentence-transformers==2.7.0
 sepolicy==3.4
 seqeval==1.2.2
