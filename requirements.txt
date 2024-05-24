@@ -144,7 +144,6 @@ pytz==2022.7.1
 PyYAML==6.0.1
 rank-bm25==0.2.2
 regex==2024.4.16
-release-notification==1.2
 requests==2.31.0
 responses==0.18.0
 rich==13.7.1
