@@ -47,7 +47,6 @@ frozenlist==1.4.1
 fsspec==2024.3.1
 gitdb==4.0.11
 GitPython==3.1.43
-gpg==1.15.1
 greenlet==3.0.3
 h11==0.14.0
 htbuilder==0.6.2
