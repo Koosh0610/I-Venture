@@ -159,18 +159,16 @@ def answer_question(question,):
     """
     Answer a question based on the most similar context from the dataframe texts
     """
-    model="gpt-3.5-turbo"
+    model="gpt-4-turbo"
     max_len=1800
     size="ada"
     debug=False
     max_tokens=250
     stop_sequence=None
     context = create_context(question,df=pd.read_csv('embeddings_new.csv',index_col=0))
-    print(context)
     ranker=Ranker("ms-marco-MiniLM-L-12-v2",cache_dir="llamaindex_entities_0.2")
     rerankrequest=RerankRequest(query=question,passages=context)
     results=ranker.rerank(rerankrequest)
-    print(results)
     text_values = [item['text'] for item in results]
     joined_text = '###'.join(text_values)
     # If debug, print the raw model response
@@ -189,7 +187,7 @@ def answer_question(question,):
     
     try:
         response = client.chat.completions.create(
-         model='gpt-3.5-turbo',
+         model='gpt-4-turbo',
         messages=messages,
          temperature=0.01,
           top_p=0.75,
