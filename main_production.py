@@ -166,20 +166,19 @@ context_prompt=(
 llm = st.selectbox("Select LLM: ",("gpt-3.5-turbo","gpt-4-turbo","gpt-4o"))
 
 def get_response(llm,prompt,message_history):
-    #llm_chat = OpenAI(model=llm)
-    #chat_engine=CondensePlusContextChatEngine.from_defaults(llm=llm_chat,retriever=hybrid_retriever,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt,streaming=True)
-    #nodes = hybrid_retriever.retrieve(prompt.lower())
-    #response = chat_engine.chat(str(prompt.lower()))
-    #context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
-    #st.write(context_str)
-    #validating_prompt = "You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
-                     ##   Query: {question}  
-                      #  Answer: {answer}
-                      #  Your Feedback:
+    llm_chat = OpenAI(model=llm)
+    chat_engine=CondensePlusContextChatEngine.from_defaults(llm=llm_chat,retriever=hybrid_retriever,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt,streaming=True)
+    nodes = hybrid_retriever.retrieve(prompt.lower())
+    response = chat_engine.chat(str(prompt.lower()))
+    context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
+    st.write(context_str)
+    validating_prompt = """You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
+                           Query: {question}  
+                           Answer: {answer}
+                           Your Feedback:"""
                         
-    #feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
-    feedback = 1
-    if 0==0: #feedback.text
+    feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
+    if feedback.text==str(0): #feedback.text
         st.write("DISTANCE APPROACH")
         response , joined_text=answer_question(prompt.lower())
         scores = rouge.get_scores(response, joined_text)
