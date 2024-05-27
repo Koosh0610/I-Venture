@@ -171,7 +171,6 @@ def get_response(llm,prompt,message_history):
     nodes = hybrid_retriever.retrieve(prompt.lower())
     response = chat_engine.chat(str(prompt.lower()))
     context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
-    st.write(context_str)
     validating_prompt = """You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
                            Query: {question}  
                            Answer: {answer}
