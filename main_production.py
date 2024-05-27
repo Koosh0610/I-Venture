@@ -198,7 +198,7 @@ def get_response(llm,prompt,message_history):
         #s3_resource.Object(bucket, 'conversation_log.csv').put(Body=csv_buffer.getvalue()) 
         #st.write(joined_text) 
         return response_list                                 
-     else:
+    else:
         context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in nodes])
         scores=rouge.get_scores(response.response,context_str)
         message = {"role": "assistant", "content": response.response}
