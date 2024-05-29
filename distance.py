@@ -115,9 +115,9 @@ with st.sidebar:
 indexPath_2000=r"index\2000\text_embedding_ada_002"
 documentsPath_2000=r"Text_Files_Old"
 #index_2000=indexgenerator(indexPath_2000,documentsPath_2000)
-vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2,embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
-bm25_retriever_2000 = BM25Retriever.from_defaults(index=index_2000,similarity_top_k=2)
-postprocessor = LongContextReorder()
+#vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2,embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
+#bm25_retriever_2000 = BM25Retriever.from_defaults(index=index_2000,similarity_top_k=2)
+#postprocessor = LongContextReorder()
 #class HybridRetriever(BaseRetriever):
 ##    def __init__(self, vector_retriever, bm25_retriever):
  #       self.vector_retriever = vector_retriever
