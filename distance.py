@@ -114,25 +114,25 @@ with st.sidebar:
 
 indexPath_2000=r"index\2000\text_embedding_ada_002"
 documentsPath_2000=r"Text_Files_Old"
-index_2000=indexgenerator(indexPath_2000,documentsPath_2000)
+#index_2000=indexgenerator(indexPath_2000,documentsPath_2000)
 vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2,embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
 bm25_retriever_2000 = BM25Retriever.from_defaults(index=index_2000,similarity_top_k=2)
 postprocessor = LongContextReorder()
-class HybridRetriever(BaseRetriever):
-    def __init__(self, vector_retriever, bm25_retriever):
-        self.vector_retriever = vector_retriever
-        self.bm25_retriever = bm25_retriever
-        super().__init__()
+#class HybridRetriever(BaseRetriever):
+##    def __init__(self, vector_retriever, bm25_retriever):
+ #       self.vector_retriever = vector_retriever
+ #       self.bm25_retriever = bm25_retriever
+ #       super().__init__()
 
-    def _retrieve(self, query, **kwargs):
-        bm25_nodes = self.bm25_retriever.retrieve(query, **kwargs)
-        vector_nodes = self.vector_retriever.retrieve(query, **kwargs)
+   # def _retrieve(self, query, **kwargs):
+   #     bm25_nodes = self.bm25_retriever.retrieve(query, **kwargs)
+   #     vector_nodes = self.vector_retriever.retrieve(query, **kwargs)#
 
         # combine the two lists of nodes
-        all_nodes = bm25_nodes + vector_nodes
-        all_nodes = postprocessor.postprocess_nodes(nodes=all_nodes,query_bundle=QueryBundle(query))
-        return all_nodes[0:3]
-hybrid_retriever = HybridRetriever(vector_retriever_2000,bm25_retriever_2000)
+     #   all_nodes = bm25_nodes + vector_nodes#
+     #   all_nodes = postprocessor.postprocess_nodes(nodes=all_nodes,query_bundle=QueryBundle(query))
+     #   return all_nodes[0:3]
+#hybrid_retriever = HybridRetriever(vector_retriever_2000,bm25_retriever_2000)
 # User-provided prompt
 page_bg_img = '''
 <style>
