@@ -153,13 +153,13 @@ def create_context(
     #return "\n\n###\n\n".join(returns)
     return result_list
 
-def answer_question(question,):
+def answer_question(llm,question,):
     
  
     """
     Answer a question based on the most similar context from the dataframe texts
     """
-    model="gpt-4-turbo"
+    model=llm
     max_len=1800
     size="ada"
     debug=False
@@ -187,7 +187,7 @@ def answer_question(question,):
     
     try:
         response = client.chat.completions.create(
-         model='gpt-4-turbo',
+         model=llm,
         messages=messages,
          temperature=0.01,
           top_p=0.75,
