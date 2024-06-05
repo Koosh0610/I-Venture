@@ -206,7 +206,7 @@ def get_response(llm,prompt,message_history):
         df = pd.read_csv(f'logs/conversation_logs.csv')
         new_row = {'Question': str(prompt), 'Answer': response.response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"] , "Context" : context_str}
         df = pd.concat([df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
-        df.to_csv(f'logs/conversation_logs_{llm}.csv', index=False)
+        df.to_csv(f'logs/conversation_logs.csv', index=False)
         #bucket = 'aiex' # already created on S3
         #csv_buffer = StringIO()
         #df.to_csv(csv_buffer)
