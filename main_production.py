@@ -111,7 +111,7 @@ with st.sidebar:
 
 #nodes=index.docstore.docs.values()
 
-indexPath_2000=r"text_embedding_ada_002"
+indexPath_2000=r"updated_data"
 documentsPath_2000=r"Text_Files_Old"
 index_2000=indexgenerator(indexPath_2000,documentsPath_2000)
 vector_retriever_2000 = VectorIndexRetriever(index=index_2000,similarity_top_k=2,embed_model=OpenAIEmbedding(model="text-embedding-ada-002"))
@@ -130,7 +130,7 @@ class HybridRetriever(BaseRetriever):
         # combine the two lists of nodes
         all_nodes = bm25_nodes + vector_nodes
         all_nodes = postprocessor.postprocess_nodes(nodes=all_nodes,query_bundle=QueryBundle(query))
-        return all_nodes[0:3]
+        return all_nodes
 hybrid_retriever = HybridRetriever(vector_retriever_2000,bm25_retriever_2000)
 # User-provided prompt
 page_bg_img = '''
@@ -166,18 +166,18 @@ context_prompt=(
 llm = st.selectbox("Select LLM: ",("gpt-3.5-turbo","gpt-4-turbo","gpt-4o"))
 
 def get_response(llm,prompt,message_history):
-    #llm_chat = OpenAI(model=llm)
-    #chat_engine=CondensePlusContextChatEngine.from_defaults(llm=llm_chat,retriever=hybrid_retriever,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt,streaming=True)
-    #nodes = hybrid_retriever.retrieve(prompt.lower())
-    #response = chat_engine.chat(str(prompt.lower()))
-    #context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
-    #validating_prompt = """You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
+    llm_chat = OpenAI(model=llm)
+    chat_engine=CondensePlusContextChatEngine.from_defaults(llm=llm_chat,retriever=hybrid_retriever,chat_history=message_history,context_prompt=context_prompt,condense_prompt=condense_prompt,streaming=True)
+    nodes = hybrid_retriever.retrieve(prompt.lower())
+    response = chat_engine.chat(str(prompt.lower()))
+    context_str = "\n\n".join([n.node.get_content(metadata_mode=MetadataMode.LLM).strip() for n in response.source_nodes])
+    validating_prompt = """You are an intelligent bot designed to assist users on an organization's website by answering their queries. You'll be given a user's question and an associated answer. Your task is to determine if the provided answer effectively resolves the query. If the answer is unsatisfactory, return 0.\n
                            #Query: {question}  
                            #Answer: {answer}
                            #Your Feedback:"""
                         
-    #feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
-    if 0==0: #feedback.text
+    feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
+    if feedback.text==str(0): #feedback.text
         st.write("DISTANCE APPROACH")
         response , joined_text=answer_question(prompt.lower())
         scores = rouge.get_scores(response, joined_text)
@@ -185,7 +185,7 @@ def get_response(llm,prompt,message_history):
         st.session_state.messages.append(message)
         #message_history.append(ChatMessage(role=MessageRole.ASSISTANT,content=str(response)),)
         response_list = [response, prompt , scores]  
-        df = pd.read_csv(f'logs/conversation_logs_{llm}.csv')
+        df = pd.read_csv(f'logs/conversation_logs.csv')
         new_row = {'Question': str(prompt), 'Answer': response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"]}
         df = pd.concat([df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
         df.to_csv(f'logs/conversation_logs_{llm}.csv', index=False)
@@ -203,7 +203,7 @@ def get_response(llm,prompt,message_history):
         st.session_state.messages.append(message)
         message_history.append(ChatMessage(role=MessageRole.ASSISTANT,content=str(response.response)),)
         response_list = [response.response, prompt , scores]
-        df = pd.read_csv(f'logs/conversation_logs_{llm}.csv')
+        df = pd.read_csv(f'logs/conversation_logs.csv')
         new_row = {'Question': str(prompt), 'Answer': response.response,'Unigram_Recall' : scores[0]["rouge-1"]["r"],'Unigram_Precision' : scores[0]["rouge-1"]["p"],'Bigram_Recall' : scores[0]["rouge-2"]["r"],'Bigram_Precision' : scores[0]["rouge-2"]["r"] , "Context" : context_str}
         df = pd.concat([df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
         df.to_csv(f'logs/conversation_logs_{llm}.csv', index=False)
