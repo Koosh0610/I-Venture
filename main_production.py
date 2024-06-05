@@ -179,7 +179,7 @@ def get_response(llm,prompt,message_history):
     feedback = llm_chat.complete(validating_prompt.format(question=prompt,answer=response.response))
     if feedback.text==str(0): #feedback.text
         st.write("DISTANCE APPROACH")
-        response , joined_text=answer_question(prompt.lower())
+        response , joined_text=answer_question(llm,prompt.lower())
         scores = rouge.get_scores(response, joined_text)
         message = {"role": "assistant", "content": response}
         st.session_state.messages.append(message)
