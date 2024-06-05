@@ -165,7 +165,7 @@ def answer_question(question,):
     debug=False
     max_tokens=250
     stop_sequence=None
-    context = create_context(question,df=pd.read_csv('embeddings_saitaja_data.csv',index_col=0))
+    context = create_context(question,df=pd.read_csv('embeddings_new.csv',index_col=0))
     ranker=Ranker("ms-marco-MiniLM-L-12-v2",cache_dir="llamaindex_entities_0.2")
     rerankrequest=RerankRequest(query=question,passages=context)
     results=ranker.rerank(rerankrequest)
